@@ -38,7 +38,7 @@ export function Resume() {
           </p>
 
           <a
-            href="/pdf/resume.pdf"
+            href="./pdf/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 rounded-full transition-all hover:scale-103 flex items-center gap-3 mx-auto justify-center"

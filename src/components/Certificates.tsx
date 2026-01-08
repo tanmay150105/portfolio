@@ -8,12 +8,17 @@ interface Certificate {
   isPlaceholder?: boolean;
 }
 
+// Type guard for real certificates
+function isRealCertificate(cert: Certificate): cert is Certificate {
+  return !cert.isPlaceholder;
+}
+
 export function Certificates() {
   const [certificates, setCertificates] = useState<Certificate[]>([]);
   const cardsPerRow = 2;
 
   useEffect(() => {
-    fetch('/certificates.json')
+    fetch('./certificates.json')
       .then((res) => res.ok ? res.json() : [])
       .then((data) => setCertificates(data))
       .catch(() => setCertificates([]));
@@ -70,7 +75,7 @@ export function Certificates() {
                     <h4 className="mb-0" style={{ color: 'var(--deep-navy)' }}>
                       {certificate.title}
                     </h4>
-                    {certificate.date && (
+                    {isRealCertificate(certificate) && certificate.date && (
                       <span
                         style={{
                           color: 'var(--light-gray)',
@@ -88,7 +93,7 @@ export function Certificates() {
                     <p style={{ color: 'var(--light-gray)', fontSize: '0.95rem' }}>
                       {certificate.organization}
                     </p>
-                    {certificate.certificateUrl && (
+                    {isRealCertificate(certificate) && certificate.certificateUrl && (
                       <a
                         href={certificate.certificateUrl}
                         target="_blank"
