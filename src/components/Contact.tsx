@@ -1,17 +1,28 @@
 import { Mail, Linkedin, Github } from 'lucide-react';
-import { useState } from 'react';
+import { useRef } from 'react';
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission (demo only)
-    alert('Thanks for reaching out! This is a demo form.');
+    const form = formRef.current;
+    if (!form) return;
+
+    const data = new FormData(form);
+
+    const res = await fetch('https://formspree.io/f/xbddrvyr', {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' },
+    });
+
+    if (res.ok) {
+      alert('Form submission successful!');
+      form.reset();
+    } else {
+      alert('There was an error submitting the form. Please try again.');
+    }
   };
 
   return (
@@ -73,7 +84,7 @@ export function Contact() {
           </div>
           {/* Right: Contact Form */}
           <div className="p-8 rounded-3xl border border-[var(--slate-gray)] bg-white shadow-md">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block mb-2" style={{ color: 'var(--deep-navy)' }}>
                   Name
@@ -81,8 +92,7 @@ export function Contact() {
                 <input
                   type="text"
                   id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  name="name"
                   required
                   className="w-full px-4 py-3 rounded-xl transition-all focus:outline-none focus:ring-2 placeholder-[color:var(--light-gray)]"
                   style={{ background: 'rgba(108, 122, 137, 0.1)', color: 'var(--deep-navy)' }}
@@ -96,8 +106,7 @@ export function Contact() {
                 <input
                   type="email"
                   id="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  name="email"
                   required
                   className="w-full px-4 py-3 rounded-xl transition-all focus:outline-none focus:ring-2 placeholder-[color:var(--light-gray)]"
                   style={{ background: 'rgba(108, 122, 137, 0.1)', color: 'var(--deep-navy)' }}
@@ -110,8 +119,7 @@ export function Contact() {
                 </label>
                 <textarea
                   id="message"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  name="message"
                   required
                   rows={5}
                   className="w-full px-4 py-3 rounded-xl transition-all focus:outline-none focus:ring-2 resize-none"
