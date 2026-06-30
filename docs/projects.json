@@ -16,8 +16,8 @@
   },
   {
   "title": "AI Attendance System",
-  "description":"- Automated attendance tracking powered by real-time facial recognition and computer vision.\n- Eliminates proxy attendance and manual logging with high-accuracy biometric verification.\n- Real-time database integration to record entry timestamps and monitor daily attendance stats.\n- Streamlined, user-friendly interface for quick enrollment and instant verification reports.",
-  "tags": ["Python","OpenCV","Computer Vision","Machine Learning","Face Recognition"],
+  "description":"- Automated attendance tracking using real-time facial recognition.\n- Prevents proxy attendance and manual logging via high-accuracy biometrics.\n- Logs real-time entry timestamps and tracks daily attendance statistics.\n- Offers a full control for fast enrollment and instant reporting.",
+  "tags": ["Python","OpenCV","Machine Learning","Face Recognition"],
   "githubUrl": "https://github.com/tanmay150105/ai-attendance",
   "image": "images/project3.png"
   }
