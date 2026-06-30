@@ -65,6 +65,7 @@ This document explains the structure and dynamic features of your portfolio proj
 - To add a new certificate: Edit `public/certificates.json`.
 - To update images: Add to `public/images/` and reference in JSON (no leading slash).
 - To update resume: Replace `public/pdf/resume.pdf`.
+- **CRITICAL STEP BEFORE PUSHING:** Always run `npm run build` before committing. This ensures the `docs/` folder contains the latest updates from the `public/` folder so your live site actually shows your new changes.
 
 ---
 
