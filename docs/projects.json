@@ -13,5 +13,12 @@
     "tags": ["Python", "Pandas", "Data Visualization"],
     "notebook": "https://www.kaggle.com/code/tanmayjain1515/disaster-relief-notification-agent",
     "image": "images/project2.png"
+  },
+  {
+  "title": "AI Attendance System",
+  "description":"- Automated attendance tracking powered by real-time facial recognition and computer vision.\n- Eliminates proxy attendance and manual logging with high-accuracy biometric verification.\n- Real-time database integration to record entry timestamps and monitor daily attendance stats.\n- Streamlined, user-friendly interface for quick enrollment and instant verification reports.",
+  "tags": ["Python","OpenCV","Computer Vision","Machine Learning","Face Recognition"],
+  "githubUrl": "https://github.com/tanmay150105/ai-attendance",
+  "image": "images/project3.png"
   }
 ]
