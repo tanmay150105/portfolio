@@ -20,5 +20,12 @@
   "tags": ["Python","OpenCV","Machine Learning","Face Recognition"],
   "githubUrl": "https://github.com/tanmay150105/ai-attendance",
   "image": "images/project3.png"
-  }
+  },
+  {
+  "title": "Kaggriculture Orchestrator",
+  "description": "- Autonomous farm optimization agent powered by Gemini 2.5 and Model Context Protocol design patterns.\n- Resilient multi-tier model routing (Flash-Lite to Flash) with a high-fidelity local fallback survival engine.\n- Eliminates platform state amnesia via a multi-action turn loop and inter-turn JSON memory hydration.\n- Actively neutralizes climate and economic shocks via dynamic physics mapping and resource allocation.",
+  "tags": ["Python","Gemini 2.5","Model Context Protocol","Autonomous Agents"],
+  "githubUrl": "https://github.com/tanmay150105/kaggiculture_agents",
+  "image": "images/project4.png"
+ }
 ]
