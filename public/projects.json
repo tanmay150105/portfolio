@@ -23,8 +23,8 @@
   },
   {
   "title": "Kaggriculture Orchestrator",
-  "description": "- Autonomous farm optimization agent powered by Gemini 2.5 and Model Context Protocol design patterns.\n- Resilient multi-tier model routing (Flash-Lite to Flash) with a high-fidelity local fallback survival engine.\n- Eliminates platform state amnesia via a multi-action turn loop and inter-turn JSON memory hydration.\n- Actively neutralizes climate and economic shocks via dynamic physics mapping and resource allocation.",
-  "tags": ["Python","Gemini 2.5","Model Context Protocol","Autonomous Agents"],
+  "description": "- Autonomous farm optimizer built on Gemini 2.5 and explicit Model Context Protocol tool patterns.\n- Resilient multi-tier model routing with a high-fidelity local fallback survival engine.\n- Prevents platform state amnesia using persistent multi-action loops and inter-turn JSON memory hydration\n- Actively neutralizes climate and economic shocks via dynamic physics mapping and resource allocation.",
+  "tags": ["Python","Model Context Protocol","Autonomous Agents"],
   "githubUrl": "https://github.com/tanmay150105/kaggiculture_agents",
   "image": "images/project4.png"
  }
